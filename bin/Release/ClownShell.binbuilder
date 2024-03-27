@@ -1,0 +1,31 @@
+SOURCES_FILE=/home/mel/Documents/csharp/ClownShellSources/ClownShell.sources;
+
+FUNCTION=SLEEP;
+
+#=This is the;
+FUNCTION=DELETE;
+NAME=QuickTools;
+FUNCTION=DELETE;
+NAME=ClownShell;
+
+FUNCTION=SLEEP;
+
+#=QuickTools;
+NAME=QuickTools;
+BIN_PATH=/home/mel/Documents/csharp/QuickTools/bin;
+SOURCE_URL=https://github.com/Mel4221/QuickTools/tree/testing;
+CREATOR=MBV;
+DESCRIPTION=This is my first C# Libreary and this has been created in the C# languague to try to help reduce the amout of code required to create simple tools;
+FUNCTION=ADD;
+
+FUNCTION=SLEEP;
+
+#=ClownShell;
+NAME=ClownShell;
+BIN_PATH=/home/mel/Documents/csharp/ClownShell/bin;
+SOURCE_URL=https://github.com/Mel4221/ClownShell/tree/v6;
+CREATOR=MBV;
+DESCRIPTION=This is a Command Line Inteface for the library QuickTools which calls all the methods insde of it and combine it as a scripting language;
+FUNCTION=ADD;
+
+FUNCTION=SLEEP;
