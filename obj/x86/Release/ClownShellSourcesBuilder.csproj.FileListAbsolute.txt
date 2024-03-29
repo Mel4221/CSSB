@@ -1,7 +1,7 @@
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/bin/Release/ClownShellSourcesBuilder.exe
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/bin/Release/QuickTools.dll
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/bin/Release/QuickTools.xml
-/home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Release/ClownShellSourcesBuilder.csproj.AssemblyReference.cache
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Release/ClownShellSourcesBuilder.csproj.CoreCompileInputs.cache
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Release/ClownShellSourcesBuilder.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Release/ClownShellSourcesBuilder.exe
+/home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Release/ClownShellSourcesBuilder.csproj.AssemblyReference.cache

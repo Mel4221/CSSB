@@ -11,15 +11,16 @@ namespace ClownShellSourcesBuilder
 {
     public partial class Builder
     {
-        private string[] args;
+        private string[] Args { get; set; } =  new string[] { };
         private BinBuilder BinBuilder { get; set; } = new BinBuilder();
+
         public Builder()
         {
         }
 
         public Builder(string[] args)
         {
-            this.args = args;
+            this.Args = args;
         }
 
        
@@ -41,29 +42,12 @@ namespace ClownShellSourcesBuilder
 
         public void Delete()
         {
+            this.BinBuilder.AllowDeubbuger = true;
+            this.BinBuilder.FileName = Get.Input("DROP OR TYPE THE SOURCES FILE PATH").Text;
+            this.BinBuilder.Delete(Get.Input("PACKAGE NAME").Text);
             return;
         }
 
-        public void Start()
-        {
-            if(this.args.Length > 0)
-            {
-                this.StartWithArgs();
-                return;
-            }if (!this.CheckIntention()) this.Delete();
-             
-            this.BinBuilder.AllowDeubbuger = true;
-            this.BinBuilder.FileName = Get.Input("DROP OR TYPE THE SOURCES FILE PATH").Text;
-            this.BinBuilder.Source = Get.Input("DROP OR TYPE THE BIN FOLDER PATH").Text;
-
-            Package package = new Package();
-            package.Name = Get.Input("PACKAGE NAME").Text;
-            package.Source = Get.Input("PACKAGE SOURCE URL").Text;
-            package.Creator = Get.Input("PACKAGE CREATOR").Text;
-            package.Description = Get.Input("PACKAGE DESCRIPTION").Text;
-            this.BinBuilder.Add(package);
-            Get.Green($"DONE!!!");
-
-        }
+ 
     }
 }
