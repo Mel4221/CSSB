@@ -12,7 +12,7 @@ namespace ClownShellSourcesBuilder
 {
     public partial class Builder
     {
-        private void ProcessCallFunction(ref Key function)
+        private void CallFunction(ref Key function)
         {
             string f, parameter;
             int number;
@@ -35,6 +35,9 @@ namespace ClownShellSourcesBuilder
             }
             switch (f)
             {
+                case "ADD":
+                    this.Add();
+                    break;
                 case "SYS_CALL":
                     ProcessStartInfo info = new ProcessStartInfo();
                     info.FileName = parameter;

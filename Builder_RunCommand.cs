@@ -15,15 +15,7 @@ namespace ClownShellSourcesBuilder
             switch (function.ToUpper())
             {
                 case "ADD":
-                    if (this.BufferPackage.Name == "" || this.BufferPackage.Source == "")
-                    {
-                        throw new Exception($"MISSING PACKAGE NAME OR PACKAGE SOURCE URL");
-                    }
-                    //this.BinBuilder.Add(this.package);
-                    Get.Pink($"ADDING PACKAGE: [{BufferPackage.Name}] TO: [{this.BinBuilder.FileName}]");
-                    Get.Blue(BufferPackage.ToString());
-                    this.BinBuilder.Add(BufferPackage);
-                    BufferPackage = new Package();
+                    this.Add();
                     break;
                 case "DELETE":
                     Get.Yellow($"DELETING FLAG ACTIVE");

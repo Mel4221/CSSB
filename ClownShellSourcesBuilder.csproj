@@ -38,11 +38,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Builder.cs" />
-    <Compile Include="Builder_WithArguments.cs" />
+    <Compile Include="Builder_StartWithArgs.cs" />
     <Compile Include="Builder_Start.cs" />
     <Compile Include="Builder_Fields.cs" />
     <Compile Include="Builder_ProcessCallFunction.cs" />
     <Compile Include="Builder_RunCommand.cs" />
+    <Compile Include="Builder_Add.cs" />
+    <Compile Include="Builder_Load.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

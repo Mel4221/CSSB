@@ -20,25 +20,24 @@ namespace ClownShellSourcesBuilder
 
         public void StartWithArgs()
         {
-            string file, content;
-            this.QKeyManager.AllowDebugger = true;
-            this.BinBuilder.AllowDeubbuger = true;
+           
+
             //new Thread(() => { Console.Title += this.BinBuilder.CurrentStatus; 
             //.WaitTime(100);
-              //   }).Start();
-            file = this.Args[0];
-            if (!File.Exists(file)) throw new FileNotFoundException($"THE GIVEN FILE WAS NOT FOUND OR DOES NOT EXIST: [{file}]");
-            content = File.ReadAllText(file)    ;
-            QKeyManager.Keys = QKeyManager.ToKeyList(content);
-            Func<string,string> F = (input) => { return input == "" ? "VOID" : input; };
-            QKeyManager.Keys.ForEach(item => Get.Yellow($"DETECTED: {item.Name} = {F(item.Value)}"));
+            //   }).Start();
+            this.Load(); 
             Key key;
+
             for (int item = 0; item < QKeyManager.Keys.Count; item++)
             {
                 key = QKeyManager.Keys[item];
                 switch (key.Name)
                 {
-
+                    case "DEBUGGER":
+                        this.AllowDebugger = key.Value == "ON";
+                        this.QKeyManager.AllowDebugger = this.AllowDebugger;
+                        this.BinBuilder.AllowDeubbuger = this.AllowDebugger;
+                        break;
                     case "VAR":
                         this.Stack.SetVariable(key.Value, "NULL");
                         break;
@@ -95,7 +94,7 @@ namespace ClownShellSourcesBuilder
                         if (key.Name.Contains("(") &&
                         key.Name.Contains(")"))
                         {
-                            this.ProcessCallFunction(ref key);
+                            this.CallFunction(ref key);
                             break;
                         }
                         else
