@@ -7,6 +7,8 @@ using System.IO;
 using QuickTools.QIO;
 using QuickTools.QConsole;
 using System.Diagnostics;
+using QuickTools.QDevelop;
+
 
 namespace ClownShellSourcesBuilder
 {
@@ -45,8 +47,8 @@ namespace ClownShellSourcesBuilder
                 case "DELETE-ALL":
 
                         if (this.AllowDebugger) Get.Red($"DELETING ALL PACKAGES FROM: {this.BinBuilder.Source}");
-                            this.BinBuilder.DeletePrevious = true; 
-
+                        ///this.BinBuilder.Packages.Clear();
+                        this.BinBuilder.Clear(); 
                     break;
                 case "ADD":
                     this.Add();
@@ -82,6 +84,9 @@ namespace ClownShellSourcesBuilder
                     {
                         throw new ArgumentException($"INVALID ARGUMENT GIVEN , EXPECTED A NUMBER IN THE GIVEN PARAMETER: [{parameter}]");
                     }
+                case "STOP":
+                    Get.Wait();
+                    break;
                 case "EXIT":
                     if (this.AllowDebugger) Get.Green("bye");
                     Environment.Exit(0);

@@ -3,9 +3,11 @@ SOURCES_FILE=/home/mel/Documents/csharp/CSS/ClownShell.sources;
 DEBUGGER=ON;
 
 #=removing old Packages=; 
-DELETE-ALL()=;
+DELETE(ClownShell)=;
+DELETE(QuickTools)=;
 
-#=QuickTools Package;
+
+#=QuickTools Lib Package;
 NAME=QuickTools;
 BIN_PATH=/home/mel/Documents/csharp/QuickTools/bin;
 SOURCE_URL=https://github.com/Mel4221/QuickTools.git;
@@ -13,9 +15,9 @@ BRANCH=testing;
 CREATOR=MBV;
 DESCRIPTION=This is my first C# Libreary and this has been created in the C# languague to try to help reduce the amout of code required to create simple tools;
 ADD()=;
+ 
 
-
-#=ClownShell Package;
+#=ClwonShell Package;
 NAME=ClownShell;
 BIN_PATH=/home/mel/Documents/csharp/ClownShell/bin;
 SOURCE_URL=https://github.com/Mel4221/ClownShell.git
@@ -23,6 +25,9 @@ BRANCH=v6;
 CREATOR=MBV;
 DESCRIPTION=This is a Command Line Inteface for the library QuickTools which calls all the methods insde of it and combine it as a scripting language;
 ADD()=;
+
+
+
 
 PRINT-ALL()=;
 EXIT()=;

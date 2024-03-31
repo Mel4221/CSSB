@@ -8,6 +8,8 @@ using QuickTools.QIO;
 using QuickTools.QConsole;
 using System.Threading;
 using System.Diagnostics;
+using QuickTools.QDevelop;
+
 namespace ClownShellSourcesBuilder
 {
     public partial class Builder

@@ -45,6 +45,9 @@
     <Compile Include="Builder_Add.cs" />
     <Compile Include="Builder_Load.cs" />
     <Compile Include="Builder_Delete.cs" />
+    <Compile Include="..\QuickToolsDownloader.cs">
+      <Link>QuickToolsDownloader.cs</Link>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

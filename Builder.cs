@@ -6,6 +6,8 @@ using QuickTools.QCore;
 using System.IO;
 using QuickTools.QIO;
 using QuickTools.QConsole;
+using QuickTools.QDevelop;
+
 
 namespace ClownShellSourcesBuilder
 {

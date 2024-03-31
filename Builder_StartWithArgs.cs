@@ -65,7 +65,6 @@ namespace ClownShellSourcesBuilder
                         break;
                     default:
                         //$VARIABLE=/P/D/D/F;
-
                         if (key.Name[0] == '$')
                         {
                             string v = key.Name.Replace("$","");
