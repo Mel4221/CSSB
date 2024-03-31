@@ -6,7 +6,7 @@ SOURCES_FILE=/home/mel/Documents/csharp/ClownShellSources/ClownShell.sources;
 #=PRINT($PATH)=;
 #=exiting the program;
 #=EXIT()=;
-SYS_CALL(git-push)=;
+SYS_CALL(bash)=/home/mel/Documents/csharp/ClownShell/./commit.sh;
 
 EXIT()=;
 #=Removing old Packages;
