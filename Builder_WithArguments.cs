@@ -44,13 +44,13 @@ namespace ClownShellSourcesBuilder
             }
         }
 
-        private void ProcessCallFunction(ref Key functionName)
+        private void ProcessCallFunction(ref Key function)
         {
-            string f, parameter, function;
+            string f, parameter;
             int number;
-            function = functionName.Name;
-            f = function.Substring(0, function.IndexOf('('));
-            parameter = function.Substring(function.IndexOf('('));
+            f = function.Name;
+            f = f.Substring(0, f.IndexOf('('));
+            parameter = f.Substring(f.IndexOf('('));
             parameter = parameter.Replace("(","");
             parameter = parameter.Replace(")","");
             //Get.Yellow($"DIRECT CALL");
@@ -70,7 +70,7 @@ namespace ClownShellSourcesBuilder
                 case "SYS_CALL":
                     ProcessStartInfo info = new ProcessStartInfo();
                     info.FileName = parameter;
-                    info.Arguments = functionName.Value;
+                    info.Arguments = function.Value;
                     Process exe = Process.Start(info);
                     exe.WaitForExit();
                     break;
