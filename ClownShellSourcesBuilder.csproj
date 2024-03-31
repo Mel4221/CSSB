@@ -40,6 +40,9 @@
     <Compile Include="Builder.cs" />
     <Compile Include="Builder_WithArguments.cs" />
     <Compile Include="Builder_Start.cs" />
+    <Compile Include="Builder_Fields.cs" />
+    <Compile Include="Builder_ProcessCallFunction.cs" />
+    <Compile Include="Builder_RunCommand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

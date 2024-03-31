@@ -1,12 +1,5 @@
 ﻿<Properties StartupConfiguration="{66D22B11-DBED-4ADB-A848-D497D786EAA1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Builder_WithArguments.cs">
-    <Files>
-      <File FileName="Builder.cs" Line="14" Column="7" />
-      <File FileName="Program.cs" Line="18" Column="25" />
-      <File FileName="Builder_WithArguments.cs" Line="49" Column="10" />
-      <File FileName="Builder_Start.cs" Line="22" Column="44" />
-      <File FileName="../../../../../usr/lib/mono/msbuild/15.0/bin/Microsoft.Common.CurrentVersion.targets" Line="2216" Column="13" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
