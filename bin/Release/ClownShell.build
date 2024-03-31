@@ -1,9 +1,9 @@
 SOURCES_FILE=/home/mel/Documents/csharp/CSS/ClownShell.sources;
 
-DEBUGGER=OFF;
-#=Removing old Packages;
-DELETE(ClownShell)=;
-DELETE(QuickTools)=;
+DEBUGGER=ON;
+
+#=removing old Packages=; 
+DELETE-ALL()=;
 
 #=QuickTools Package;
 NAME=QuickTools;

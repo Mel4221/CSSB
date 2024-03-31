@@ -14,36 +14,50 @@ namespace ClownShellSourcesBuilder
     {
         private void CallFunction(ref Key function)
         {
-            string f, parameter;
+            string f, parameter, fSignature;
             int number;
             f = function.Name;
             f = f.Substring(0, f.IndexOf('('));
-            parameter = f.Substring(f.IndexOf('('));
+            fSignature = function.Name;
+
+            parameter = fSignature.Substring(fSignature.IndexOf('('));
             parameter = parameter.Replace("(", "");
             parameter = parameter.Replace(")", "");
-            //Get.Yellow($"DIRECT CALL");
-            //Get.Yellow($"FUNCTION DETECTED: [{f}] PARAMETER: [{parameter}]");
+            if (this.AllowDebugger) Get.Yellow($"DIRECT CALL");
+            if (this.AllowDebugger) Get.Yellow($"FUNCTION DETECTED: [{f}] PARAMETER: [{parameter}]");
             if (parameter.Length > 0)
             {
                 if (parameter[0] == '$')
                 {
                     Variable v = this.Stack.GetVariable(parameter.Replace("$", ""));
                     parameter = v.Value;
-                    //Get.Red(v.ToString());
+                    if (this.AllowDebugger) Get.Red(v.ToString());
                 }
 
             }
             switch (f)
             {
+                case "DELETE":
+                    IsDeleting = true; 
+                    this.Delete(parameter);
+                    IsDeleting = false; 
+                    break;
+                case "DELETE-ALL":
+
+                        if (this.AllowDebugger) Get.Red($"DELETING ALL PACKAGES FROM: {this.BinBuilder.Source}");
+                            this.BinBuilder.DeletePrevious = true; 
+
+                    break;
                 case "ADD":
                     this.Add();
                     break;
                 case "SYS_CALL":
+                    if (this.AllowDebugger) Get.Yellow($"SYSTEM CALL: [{parameter}] ARGS: [{function.Value}]");
                     ProcessStartInfo info = new ProcessStartInfo();
                     info.FileName = parameter;
                     info.Arguments = function.Value;
                     Process exe = Process.Start(info);
-                    exe.WaitForExit();
+                    //exe.WaitForExit();
                     break;
                 case "PRINT-ALL":
                     BinBuilder bin = new BinBuilder();
@@ -51,7 +65,7 @@ namespace ClownShellSourcesBuilder
                     bin.AllowDeubbuger = this.BinBuilder.AllowDeubbuger;
                     bin.Load();
                     bin.Packages.ForEach(p => Get.Green(p.ToString()));
-                    Get.Yellow($"Packages in sources file: [{bin.Packages.Count}]");
+                    Get.Yellow($"PACKAGES COUNT: [{bin.Packages.Count}]");
                     return;
                 case "ECHO":
                 case "PRINT":
@@ -69,7 +83,7 @@ namespace ClownShellSourcesBuilder
                         throw new ArgumentException($"INVALID ARGUMENT GIVEN , EXPECTED A NUMBER IN THE GIVEN PARAMETER: [{parameter}]");
                     }
                 case "EXIT":
-                    Get.Green("bye");
+                    if (this.AllowDebugger) Get.Green("bye");
                     Environment.Exit(0);
                     return;
                 default:

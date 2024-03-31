@@ -14,40 +14,15 @@ namespace ClownShellSourcesBuilder
         private string[] Args { get; set; } =  new string[] { };
         private BinBuilder BinBuilder { get; set; } = new BinBuilder();
 
-        public Builder()
-        {
-        }
 
         public Builder(string[] args)
         {
             this.Args = args;
         }
-
-       
-      
-      
-        private string[] options { get; set; } = {"ADD PACKAGE","DELETE PACKAGE"};
-        private bool CheckIntention()
+        public void Start()
         {
-            Options option = new Options(this.options); 
-            if(option.Pick() == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            this.StartWithArgs(); 
         }
 
-        public void Delete()
-        {
-            this.BinBuilder.AllowDeubbuger = true;
-            this.BinBuilder.FileName = Get.Input("DROP OR TYPE THE SOURCES FILE PATH").Text;
-            this.BinBuilder.Delete(Get.Input("PACKAGE NAME").Text);
-            return;
-        }
-
- 
     }
 }

@@ -14,8 +14,7 @@ namespace ClownShellSourcesBuilder
             }
             else
             {
-                builder = new Builder();
-                builder.Start(); 
+                return;
             }
 
         }

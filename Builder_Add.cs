@@ -19,8 +19,8 @@ namespace ClownShellSourcesBuilder
                 throw new Exception($"MISSING PACKAGE NAME OR PACKAGE SOURCE URL");
             }
             //this.BinBuilder.Add(this.package);
-            Get.Pink($"ADDING PACKAGE: [{BufferPackage.Name}] TO: [{this.BinBuilder.FileName}]");
-            Get.Blue(BufferPackage.ToString());
+            if (this.AllowDebugger) Get.Pink($"ADDING PACKAGE: [{BufferPackage.Name}] TO: [{this.BinBuilder.FileName}]");
+            if (this.AllowDebugger) Get.Blue(BufferPackage.ToString());
             this.BinBuilder.Add(BufferPackage);
             BufferPackage = new Package();
         }
