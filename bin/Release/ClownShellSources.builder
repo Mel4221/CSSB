@@ -6,7 +6,9 @@ SOURCES_FILE=/home/mel/Documents/csharp/ClownShellSources/ClownShell.sources;
 #=PRINT($PATH)=;
 #=exiting the program;
 #=EXIT()=;
+SYS_CALL(git-push)=_;
 
+EXIT()=;
 #=Removing old Packages;
 FUNCTION=DELETE;
 NAME=ClownShell;
@@ -17,7 +19,8 @@ NAME=QuickTools;
 SLEEP(5000)=;
 
 #=Testing to add just some other files out side of the bin folder;
-
+NAME=TEST;
+BIN_PATH=;
 
 
 

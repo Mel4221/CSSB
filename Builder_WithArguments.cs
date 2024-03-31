@@ -7,6 +7,7 @@ using System.IO;
 using QuickTools.QIO;
 using QuickTools.QConsole;
 using System.Threading;
+using System.Diagnostics;
 
 namespace ClownShellSourcesBuilder
 {
@@ -66,6 +67,13 @@ namespace ClownShellSourcesBuilder
             }
             switch (f)
             {
+                case "SYS_CALL":
+                    ProcessStartInfo info = new ProcessStartInfo();
+                    info.FileName = parameter;
+                    info.Arguments = functionName.Value;
+                    Process exe = Process.Start(info);
+                    exe.WaitForExit();
+                    break;
                 case "PRINT-ALL":
                     BinBuilder bin = new BinBuilder();
                     bin.FileName = this.BinBuilder.FileName;
@@ -129,6 +137,9 @@ namespace ClownShellSourcesBuilder
                     case "BIN_PATH":
                         Get.Green($"BIN PATH DETECTED: [{key.Value}]");
                         this.BinBuilder.Source = key.Value;
+                        break;
+                    case "BRANCH":
+                        this.package.Branch = key.Value;
                         break;
                     case "NAME":
                         if (!this.IsDeleting)

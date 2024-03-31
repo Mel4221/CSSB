@@ -1289,6 +1289,18 @@
             </summary>
             <value>The current status.</value>
         </member>
+        <member name="P:QuickTools.QCore.Get.CurrentTextStatus">
+            <summary>
+            Gets or sets the current text status.
+            </summary>
+            <value>The current text status.</value>
+        </member>
+        <member name="P:QuickTools.QCore.Get.CurrentIntStatus">
+            <summary>
+            Gets or sets the current int status.
+            </summary>
+            <value>The current int status.</value>
+        </member>
         <member name="P:QuickTools.QCore.Get.PublicID">
             <summary>
             Gets or sets the public identifier.
@@ -2541,6 +2553,18 @@
             </summary>
             <value><c>true</c> if allow debuger; otherwise, <c>false</c>.</value>
         </member>
+        <member name="P:QuickTools.QData.MiniDB.CurrentTextStatus">
+            <summary>
+            Gets or sets the current text status.
+            </summary>
+            <value>The current text status.</value>
+        </member>
+        <member name="P:QuickTools.QData.MiniDB.CurrentIntStatus">
+            <summary>
+            Gets or sets the current int status.
+            </summary>
+            <value>The current int status.</value>
+        </member>
         <member name="P:QuickTools.QData.MiniDB.DubuggerMode">
             <summary>
             Gets or sets the dubugger mode.
@@ -2567,6 +2591,16 @@
         <member name="T:QuickTools.QData.MiniDB.MiniDB_Format">
             <summary>
             MiniDB Format.
+            </summary>
+        </member>
+        <member name="F:QuickTools.QData.MiniDB.MiniDB_Format.Default">
+            <summary>
+            The default.
+            </summary>
+        </member>
+        <member name="F:QuickTools.QData.MiniDB.MiniDB_Format.Compress">
+            <summary>
+            The compress.
             </summary>
         </member>
         <member name="M:QuickTools.QData.MiniDB.AddKey(System.Object,System.Object,System.Boolean)">
@@ -3525,11 +3559,16 @@
             </summary>
             <returns>The keys.</returns>
         </member>
-        <member name="P:QuickTools.QData.QKeyManager.CurrentStatus">
+        <member name="M:QuickTools.QData.QKeyManager.Dispose(System.Boolean)">
             <summary>
-            Gets or sets the current status.
+            Dispose the specified disposing.
             </summary>
-            <value>The current status.</value>
+            <param name="disposing">If set to <c>true</c> disposing.</param>
+        </member>
+        <member name="M:QuickTools.QData.QKeyManager.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:QuickTools.QData.QKeyManager"/> object.
+            </summary>
         </member>
         <member name="P:QuickTools.QData.QKeyManager.QKeyId">
             <summary>
@@ -3554,6 +3593,18 @@
             Gets or sets a value indicating whether this <see cref="T:QuickTools.QData.KeyManager"/> allow debugger.
             </summary>
             <value><c>true</c> if allow debugger; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuickTools.QData.QKeyManager.CurrentTextStatus">
+            <summary>
+            Gets or sets the current text status.
+            </summary>
+            <value>The current text status.</value>
+        </member>
+        <member name="P:QuickTools.QData.QKeyManager.CurrentIntStatus">
+            <summary>
+            Gets or sets the current int status.
+            </summary>
+            <value>The current int status.</value>
         </member>
         <member name="P:QuickTools.QData.QKeyManager.CheckForNotRepetedKeys">
             <summary>
@@ -4839,6 +4890,12 @@
             </summary>
             <value>The source.</value>
         </member>
+        <member name="P:QuickTools.QIO.Package.Branch">
+            <summary>
+            Gets or sets the branch by default is set to main
+            </summary>
+            <value>The branch.</value>
+        </member>
         <member name="P:QuickTools.QIO.Package.DependencyFiles">
             <summary>
             Gets or sets the dependency files.
@@ -4948,11 +5005,17 @@
             </summary>
             <value><c>true</c> if allow deubbuger; otherwise, <c>false</c>.</value>
         </member>
-        <member name="P:QuickTools.QIO.BinBuilder.CurrentStatus">
+        <member name="P:QuickTools.QIO.BinBuilder.CurrentTextStatus">
             <summary>
             Gets or sets the current status.
             </summary>
             <value>The current status.</value>
+        </member>
+        <member name="P:QuickTools.QIO.BinBuilder.CurrentIntStatus">
+            <summary>
+            Gets or sets the current int status.
+            </summary>
+            <value>The current int status.</value>
         </member>
         <member name="P:QuickTools.QIO.BinBuilder.DeletePrevious">
             <summary>
@@ -5168,6 +5231,20 @@
             or any other file has recent commits just disregard the red flag
             </summary>
             <param name="package">Package.</param>
+        </member>
+        <member name="M:QuickTools.QIO.BinDownloader.GetPackage(System.String)">
+            <summary>
+            Gets the package.
+            </summary>
+            <returns>The package.</returns>
+            <param name="package">Package.</param>
+        </member>
+        <member name="M:QuickTools.QIO.BinDownloader.GetLink(QuickTools.QIO.Package@,System.String)">
+            <summary>
+            Gets the link of the given 
+            </summary>
+            <returns>The link.</returns>
+            <param name="link">Link.</param>
         </member>
         <member name="T:QuickTools.QMath.QMath">
             <summary>

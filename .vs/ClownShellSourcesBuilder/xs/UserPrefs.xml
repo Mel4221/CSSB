@@ -1,5 +1,5 @@
 ﻿<Properties StartupConfiguration="{66D22B11-DBED-4ADB-A848-D497D786EAA1}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Builder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Builder_WithArguments.cs">
     <Files>
       <File FileName="Builder.cs" Line="14" Column="7" />
       <File FileName="Program.cs" Line="18" Column="25" />
@@ -12,7 +12,7 @@
         <State name="__root__">
           <Node name="ClownShellSourcesBuilder" expanded="True">
             <Node name="ClownShellSourcesBuilder" expanded="True">
-              <Node name="Builder.cs" selected="True" />
+              <Node name="Builder_WithArguments.cs" selected="True" />
             </Node>
           </Node>
         </State>
