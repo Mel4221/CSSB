@@ -1,11 +1,14 @@
 ﻿<Properties StartupConfiguration="{66D22B11-DBED-4ADB-A848-D497D786EAA1}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="QuickToolsDownloader.cs">
+    <Files>
+      <File FileName="QuickToolsDownloader.cs" Line="54" Column="18" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ClownShellSourcesBuilder" expanded="True">
             <Node name="ClownShellSourcesBuilder" expanded="True">
-              <Node name="Builder_StartWithArgs.cs" selected="True" />
+              <Node name="QuickToolsDownloader.cs" selected="True" />
             </Node>
           </Node>
         </State>
