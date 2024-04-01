@@ -7,3 +7,12 @@
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Debug/ClownShellSourcesBuilder.csproj.CopyComplete
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Debug/ClownShellSourcesBuilder.exe
 /home/mel/Documents/csharp/ClownShellSourcesBuilder/obj/x86/Debug/ClownShellSourcesBuilder.pdb
+C:\Users\Melquiceded\Documents\csharp\CSSB\bin\Debug\ClownShellSourcesBuilder.exe
+C:\Users\Melquiceded\Documents\csharp\CSSB\bin\Debug\ClownShellSourcesBuilder.pdb
+C:\Users\Melquiceded\Documents\csharp\CSSB\bin\Debug\QuickTools.dll
+C:\Users\Melquiceded\Documents\csharp\CSSB\bin\Debug\QuickTools.xml
+C:\Users\Melquiceded\Documents\csharp\CSSB\obj\x86\Debug\ClownShellSourcesBuilder.csproj.AssemblyReference.cache
+C:\Users\Melquiceded\Documents\csharp\CSSB\obj\x86\Debug\ClownShellSourcesBuilder.csproj.CoreCompileInputs.cache
+C:\Users\Melquiceded\Documents\csharp\CSSB\obj\x86\Debug\ClownShellSourcesBuilder.csproj.CopyComplete
+C:\Users\Melquiceded\Documents\csharp\CSSB\obj\x86\Debug\ClownShellSourcesBuilder.exe
+C:\Users\Melquiceded\Documents\csharp\CSSB\obj\x86\Debug\ClownShellSourcesBuilder.pdb

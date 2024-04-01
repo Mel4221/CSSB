@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading;
@@ -48,26 +49,46 @@ namespace MiniTool
         public void Dowload()
         {
             const string q = "QuickTools.dll";
-            if (!File.Exists(q))
+            string link = $"{Link}/{BranchName}/{SubPath}/{q}";
+
+			if (!File.Exists(q))
             {
                 try
                 {
-                    Wait("PLEASE WAIT...", () =>
+                    Wait($"PLEASE WAIT DOWNLOADING: [{link}]", () =>
                     {
+                        Thread.Sleep(5000);
                         using (WebClient client = new WebClient())
                         {
                             client.UseDefaultCredentials = true;
 
-                            Uri Uri = new Uri($"{Link}/{BranchName}/{q}");
+                            Uri Uri = new Uri(link);
                             client.DownloadFileAsync(Uri, q);
                             while (client.IsBusy) { }
                         }
+                      
                     });
-                }catch(Exception ex)
+					GC.Collect();
+					if(File.ReadAllBytes(q).Length == 0)
+                    {
+                        File.Delete(q);
+                        throw new Exception($"THE PACKAGE WAS NO IN THE CORRECT FORMAT");
+                    }
+
+				}
+				catch(Exception ex)
                 {
-                    Console.WriteLine($"FAILED TO DOWNLOAD THE REQUIRED PACKAGE: [{q}] DUE TO THE FALLOWING REASON: \n{ex}");
+                    Console.WriteLine($"FAILED TO DOWNLOAD THE REQUIRED PACKAGE: [{q}] DUE TO THE FALLOWING REASON: \n{ex} LINK: [{link}]");
+                    throw ex; 
                 }
-            }
+                return;
+            }else{
+				if (File.ReadAllBytes(q).Length == 0)
+				{
+					File.Delete(q);
+					throw new Exception($"THE PACKAGE WAS NO IN THE CORRECT FORMAT");
+				}
+			}
         }
     }
 }

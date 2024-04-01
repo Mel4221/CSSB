@@ -17,7 +17,8 @@ namespace ClownShellSourcesBuilder
             for (int item = 0; item < QKeyManager.Keys.Count; item++)
             {
                 key = QKeyManager.Keys[item];
-                switch (key.Name)
+                //Get.Wait(key);
+                switch (key.Name.Replace(" ",""))
                 {
                     //DEBUGGER
                     case "DEBUGGER":
@@ -81,7 +82,7 @@ namespace ClownShellSourcesBuilder
                         }
                         else
                         {
-                            throw new Exception($"INVALID FUNCTION DETECTED: [{key.Name}]");
+                            throw new Exception($"INVALID FUNCTION DETECTED: [{key.Name}]\nFULL INPUT: {key}");
                         }
                 }
                 //Get.WaitTime(500);
