@@ -1,7 +1,8 @@
 ﻿using System;
 using QuickTools.QData;
 using QuickTools.QCore;
-
+using System.IO;
+using QuickTools.QIO;
 
 namespace ClownShellSourcesBuilder
 {
@@ -11,14 +12,16 @@ namespace ClownShellSourcesBuilder
         public void StartWithArgs()
         {
 
-            this.Load(); 
-            Key key;
+            this.Load();
+            Key key; 
+            this.QKeyManager.AllowDebugger = this.AllowDebugger;
+            this.BinBuilder.AllowDeubbuger = this.AllowDebugger;
 
             for (int item = 0; item < QKeyManager.Keys.Count; item++)
             {
                 key = QKeyManager.Keys[item];
                 //Get.Wait(key);
-                switch (key.Name.Replace(" ",""))
+                switch (key.Name)
                 {
                     //DEBUGGER
                     case "DEBUGGER":
@@ -34,6 +37,7 @@ namespace ClownShellSourcesBuilder
                         break;
                     case "BIN_PATH":
                         if(this.AllowDebugger)Get.Green($"BIN PATH DETECTED: [{key.Value}]");
+                        if (!Directory.Exists(key.Value)) { Get.Red($"DIRECTORY NOT FOUND: [{key.Value}]"); return; }
                         this.BinBuilder.Source = key.Value;
                         break;
                     case "BRANCH":
@@ -61,8 +65,10 @@ namespace ClownShellSourcesBuilder
                         BufferPackage.Description = key.Value;
                         break;
                     case "SOURCES_FILE":
-                        if (this.AllowDebugger) Get.Green($"PACKAGE SOURCES FILE DETECTED: [{key.Value}]");
+                        bool exist = File.Exists(key.Value);
+                        if (this.AllowDebugger) Get.Green($"PACKAGE SOURCES FILE DETECTED: [{key.Value}] EXIST: [{exist}]");
                         this.BinBuilder.FileName = key.Value;
+                        if (exist) this.MakeBackup(); 
                         break;
                     default:
                         //$VARIABLE=/P/D/D/F;
@@ -88,6 +94,14 @@ namespace ClownShellSourcesBuilder
                 //Get.WaitTime(500);
             }
 
+        }
+
+        private void MakeBackup()
+        {
+            string file = this.BinBuilder.FileName; 
+            if (this.AllowDebugger) Get.Yellow($"MAKING BACKUP FOR: [{file}]");
+            string buffer = File.ReadAllText(file);
+            File.WriteAllText($"{file}.backup", buffer);
         }
     }
 }
