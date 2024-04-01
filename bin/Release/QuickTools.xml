@@ -1711,6 +1711,12 @@
             Clear the console
             </summary>
         </member>
+        <member name="M:QuickTools.QCore.Get.Clear(System.Boolean)">
+            <summary>
+            Clear the specified everything.
+            </summary>
+            <param name="everything">If set to <c>true</c> everything.</param>
+        </member>
         <member name="M:QuickTools.QCore.Get.ClearAfter(System.Object)">
             <summary>
             Clears the after the content given 
@@ -2463,6 +2469,35 @@
             </summary>
             <param name="array">Array.</param>
         </member>
+        <member name="T:QuickTools.QCore.QuickToolsStandars">
+            <summary>
+            Quick tools standars.
+            </summary>
+        </member>
+        <member name="P:QuickTools.QCore.QuickToolsStandars.PublicIDLength">
+            <summary>
+            Gets or sets the public IDL ength.
+            </summary>
+            <value>The public IDL ength.</value>
+        </member>
+        <member name="P:QuickTools.QCore.QuickToolsStandars.DefaultPortA">
+            <summary>
+            Gets or sets the default port a.
+            </summary>
+            <value>The default port a.</value>
+        </member>
+        <member name="P:QuickTools.QCore.QuickToolsStandars.DefaultPortB">
+            <summary>
+            Gets or sets the default port b.
+            </summary>
+            <value>The default port b.</value>
+        </member>
+        <member name="P:QuickTools.QCore.QuickToolsStandars.ServiceRandomIdLength">
+            <summary>
+            Gets or sets the length of the service random identifier.
+            </summary>
+            <value>The length of the service random identifier.</value>
+        </member>
         <member name="T:QuickTools.QData.MiniDB">
             <summary>
             Mini DB is a class that provide a semy no relation database 
@@ -2835,6 +2870,65 @@
             </summary>
             <returns>The where key.</returns>
             <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelecAlltWhereKey(System.Object)">
+            <summary>
+            Selecs the allt where key.
+            </summary>
+            <returns>The allt where key.</returns>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectWhereKey(System.String,System.String)">
+            <summary>
+            Selects the where key.
+            </summary>
+            <returns>The where key.</returns>
+            <param name="dbName">Db name.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectWhereValue(System.String,System.String)">
+            <summary>
+            Selects the where value.
+            </summary>
+            <returns>The where value.</returns>
+            <param name="dbName">Db name.</param>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectWhereValue(System.String)">
+            <summary>
+            Selects the where value.
+            </summary>
+            <returns>The where value.</returns>
+            <param name="value">Value.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectWhereRelation(System.String)">
+            <summary>
+            Selects the where relation.
+            </summary>
+            <returns>The where relation.</returns>
+            <param name="relation">Relation.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectWhereId(System.Int32)">
+            <summary>
+            Selects the where identifier.
+            </summary>
+            <returns>The where identifier.</returns>
+            <param name="Id">Identifier.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectAllByRelation(System.String,System.String)">
+            <summary>
+            Selects all by relation.
+            </summary>
+            <returns>The all by relation.</returns>
+            <param name="dbName">Db name.</param>
+            <param name="relation">Relation.</param>
+        </member>
+        <member name="M:QuickTools.QData.MiniDB.SelectAllByRelation(System.Object)">
+            <summary>
+            Selects all by relation.
+            </summary>
+            <returns>The all by relation.</returns>
+            <param name="relation">Relation.</param>
         </member>
         <member name="M:QuickTools.QData.MiniDB.Dispose">
             <summary>
@@ -3877,157 +3971,6 @@
             <param name="start">Start.</param>
             <param name="end">End.</param>
         </member>
-        <member name="T:QuickTools.QIO.QZip">
-            <summary>
-            QZip is 
-            </summary>
-        </member>
-        <member name="T:QuickTools.QIO.QZip.Archive">
-            <summary>
-            Archive Generator 
-            </summary>
-        </member>
-        <member name="P:QuickTools.QIO.QZip.Archive.CreateBuildList">
-            <summary>
-            Gets or sets a value indicating whether this <see cref="T:QuickTools.QZip.Archive"/> create build list.
-            </summary>
-            <value><c>true</c> if create build list; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="F:QuickTools.QIO.QZip.Archive.FailList">
-            <summary>
-            The fail list.
-            </summary>
-        </member>
-        <member name="T:QuickTools.QIO.QZip.Archive.FailInfo">
-            <summary>
-            Fail info.
-            </summary>
-        </member>
-        <member name="P:QuickTools.QIO.QZip.Archive.FailInfo.FileName">
-            <summary>
-            Gets or sets the name of the file.
-            </summary>
-            <value>The name of the file.</value>
-        </member>
-        <member name="P:QuickTools.QIO.QZip.Archive.FailInfo.Reason">
-            <summary>
-            Gets or sets the reason.
-            </summary>
-            <value>The reason.</value>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Archive.Build">
-            <summary>
-            Build this instance.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Archive.UnBuild">
-            <summary>
-            Uns the build.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Archive.PrintBuildResults">
-            <summary>
-            Prints the build results.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Archive.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QZip.Archive"/> class.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Archive.#ctor(System.String,System.String[])">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QZip.Archive"/> class.
-            </summary>
-            <param name="archiveName">Archive name.</param>
-            <param name="files">Files.</param>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.CompressList">
-            <summary>
-            Compress a list of files given on the Initialization
-            </summary>
-        </member>
-        <member name="P:QuickTools.QIO.QZip.AllowDebugger">
-            <summary>
-            Gets or sets a value indicating whether this <see cref="T:QuickTools.QIO.QZip"/> allow debugger.
-            </summary>
-            <value><c>true</c> if allow debugger; otherwise, <c>false</c>.</value>
-        </member>
-        <member name="P:QuickTools.QIO.QZip.Status">
-            <summary>
-            Gets or sets the status of the current state of the Action either Zip or UnZip are suported
-            </summary>
-            <value>The status.</value>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Zip(System.String,System.String[])">
-            <summary>
-            Zip the specified archiveName and files.
-            </summary>
-            <param name="archiveName">Archive name.</param>
-            <param name="files">Files.</param>
-        </member>
-        <member name="F:QuickTools.QIO.QZip.Errors">
-            <summary>
-            Contains the list of error .
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.UnZip(System.String,System.String)">
-            <summary>
-            Uns the zip.
-            </summary>
-            <param name="archive">Archive.</param>
-            <param name="outPath">Out path.</param>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.DecompressList">
-            <summary>
-            Decompresses the list of files
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Compress">
-            <summary>
-            Compress this instance.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Compress(System.String)">
-            <summary>
-            Compress the specified file.
-            </summary>
-            <param name="file">File.</param>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Decompress">
-            <summary>
-            Decompress this instance.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.Decompress(System.String)">
-            <summary>
-            Decompress the specified file.
-            </summary>
-            <param name="file">File.</param>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
-            </summary>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
-            </summary>
-            <param name="file">File.</param>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.#ctor(System.String[])">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
-            </summary>
-            <param name="fileList">File list.</param>
-        </member>
-        <member name="M:QuickTools.QIO.QZip.#ctor(System.Collections.Generic.List{System.String})">
-            <summary>
-            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
-            </summary>
-            <param name="fileList">File list.</param>
-        </member>
         <member name="T:QuickTools.QIO.Binary">
             <summary>
             Binary.
@@ -4453,6 +4396,103 @@
             Releases all resource used by the <see cref="T:QuickTools.Reader"/> object.
             </summary>
             <see cref="T:QuickTools.Reader"/> so the garbage collector can reclaim the memory that the
+        </member>
+        <member name="T:QuickTools.QIO.QZip">
+            <summary>
+            QZip is 
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.CompressList">
+            <summary>
+            Compress a list of files given on the Initialization
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.Zip(System.String,System.String[])">
+            <summary>
+            Zip the specified archiveName and files.
+            </summary>
+            <param name="archiveName">Archive name.</param>
+            <param name="files">Files.</param>
+        </member>
+        <member name="F:QuickTools.QIO.QZip.Errors">
+            <summary>
+            Contains the list of error .
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.UnZip(System.String,System.String)">
+            <summary>
+            Uns the zip.
+            </summary>
+            <param name="archive">Archive.</param>
+            <param name="outPath">Out path.</param>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.DecompressList">
+            <summary>
+            Decompresses the list of files
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.Compress">
+            <summary>
+            Compress this instance.
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.Compress(System.String)">
+            <summary>
+            Compress the specified file.
+            </summary>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.Decompress">
+            <summary>
+            Decompress this instance.
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.Decompress(System.String)">
+            <summary>
+            Decompress the specified file.
+            </summary>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
+            </summary>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
+            </summary>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
+            </summary>
+            <param name="fileList">File list.</param>
+        </member>
+        <member name="M:QuickTools.QIO.QZip.#ctor(System.Collections.Generic.List{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:QuickTools.QZip"/> class.
+            </summary>
+            <param name="fileList">File list.</param>
+        </member>
+        <member name="P:QuickTools.QIO.QZip.AllowDebugger">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:QuickTools.QIO.QZip"/> allow debugger.
+            </summary>
+            <value><c>true</c> if allow debugger; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:QuickTools.QIO.QZip.CurrentTextStatus">
+            <summary>
+            Gets or sets the status of the current state of the Action either Zip or UnZip are suported
+            </summary>
+            <value>The status.</value>
+        </member>
+        <member name="P:QuickTools.QIO.QZip.CurrentIntStatus">
+            <summary>
+            Gets or sets the current int status.
+            </summary>
+            <value>The current int status.</value>
         </member>
         <member name="T:QuickTools.QIO.Writer">
             <summary>
@@ -5430,6 +5470,11 @@
             Releases all resource used by the <see cref="T:QuickTools.Net.QHttp"/> object.
             </summary>
         </member>
+        <member name="T:QuickTools.QNet.UploadManager">
+            <summary>
+            Upload manager.
+            </summary>
+        </member>
         <member name="P:QuickTools.QNet.UploadManager.Address">
             <summary>
             Gets or sets the address for the file to be uploaded
@@ -6069,13 +6114,6 @@
             <returns>The package.</returns>
             <param name="package">Package.</param>
         </member>
-        <member name="M:QuickTools.QDevelop.BinDownloader.GetLink(QuickTools.QDevelop.Package@,System.String)">
-            <summary>
-            Gets the link of the given 
-            </summary>
-            <returns>The link.</returns>
-            <param name="link">Link.</param>
-        </member>
         <member name="M:QuickTools.QDevelop.BinDownloader.CheckPackageIntegrity(QuickTools.QDevelop.Package@)">
             <summary>
             Checks the package integrity one by one but if it fails it does not mean that 
@@ -6093,6 +6131,11 @@
             </summary>
             <param name="package">Package.</param>
             <exception cref="T:System.Exception">Package not found exeption</exception>
+        </member>
+        <member name="M:QuickTools.QDevelop.BinDownloader.DownloadSourcesAndLoad">
+            <summary>
+            Downloads the sources and load them.
+            </summary>
         </member>
         <member name="M:QuickTools.QDevelop.BinDownloader.DownloadSources">
             <summary>
@@ -6200,6 +6243,23 @@
             Clear this instance.
             </summary>
         </member>
+        <member name="T:QuickTools.QDevelop.Package.Directorys">
+            <summary>
+            Directorys.
+            </summary>
+        </member>
+        <member name="P:QuickTools.QDevelop.Package.Directorys.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="M:QuickTools.QDevelop.Package.Directorys.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:QuickTools.QIO.Package.Directorys"/>.
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:QuickTools.QIO.Package.Directorys"/>.</returns>
+        </member>
         <member name="T:QuickTools.QDevelop.Package.Files">
             <summary>
             Files.
@@ -6239,23 +6299,6 @@
             <summary>
             Clear this instance.
             </summary>
-        </member>
-        <member name="T:QuickTools.QDevelop.Package.Directorys">
-            <summary>
-            Directorys.
-            </summary>
-        </member>
-        <member name="P:QuickTools.QDevelop.Package.Directorys.Name">
-            <summary>
-            Gets or sets the name.
-            </summary>
-            <value>The name.</value>
-        </member>
-        <member name="M:QuickTools.QDevelop.Package.Directorys.ToString">
-            <summary>
-            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:QuickTools.QIO.Package.Directorys"/>.
-            </summary>
-            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:QuickTools.QIO.Package.Directorys"/>.</returns>
         </member>
     </members>
 </doc>

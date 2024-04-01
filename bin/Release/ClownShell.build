@@ -2,9 +2,10 @@ SOURCES_FILE=/home/mel/Documents/csharp/CSS/ClownShell.sources;
 
 DEBUGGER=ON;
 
-#=removing old Packages=; 
+#=Removing previus packages=; 
 DELETE(ClownShell)=;
 DELETE(QuickTools)=;
+
 
 
 #=QuickTools Lib Package;
@@ -20,13 +21,11 @@ ADD()=;
 #=ClwonShell Package;
 NAME=ClownShell;
 BIN_PATH=/home/mel/Documents/csharp/ClownShell/bin;
-SOURCE_URL=https://github.com/Mel4221/ClownShell.git
+SOURCE_URL=https://github.com/Mel4221/ClownShell.git;
 BRANCH=v6;
 CREATOR=MBV;
 DESCRIPTION=This is a Command Line Inteface for the library QuickTools which calls all the methods insde of it and combine it as a scripting language;
 ADD()=;
-
-
 
 
 PRINT-ALL()=;

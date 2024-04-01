@@ -16,6 +16,8 @@ namespace ClownShellSourcesBuilder
         private VirtualStack Stack = new VirtualStack();
         private bool AllowDebugger { get; set; } = true;
         private bool IsDeleting { get; set; } = false;
+        private string FileContent { get; set; } = null;
+        private int FailLineNumber { get; set; } = 0; 
 
     }
 }
